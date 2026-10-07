@@ -2,56 +2,99 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — RecruitLens</title>
 <style>
-  body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 24px; line-height: 1.7; color: #1a1a1a; }
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; color: #1a1a1a; line-height: 1.6; background: #fff; }
   h1 { font-size: 28px; margin-bottom: 4px; }
-  .updated { color: #666; font-size: 13px; margin-bottom: 32px; }
-  h2 { font-size: 18px; margin-top: 32px; }
-  ul { padding-left: 20px; }
-  a { color: #0066cc; }
+  .updated { color: #666; font-size: 14px; margin-bottom: 32px; }
+  h2 { font-size: 19px; margin-top: 36px; border-bottom: 2px solid #FFD700; padding-bottom: 6px; }
+  h3 { font-size: 15px; margin-top: 20px; }
+  p, li { font-size: 15px; }
+  ul { padding-left: 22px; }
+  a { color: #b8860b; }
+  .back { display: inline-block; margin-top: 40px; font-size: 14px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #fafafa; }
 </style>
 </head>
 <body>
-<h1>RecruitLens — Privacy Policy</h1>
-<p class="updated">Last updated: September 2026</p>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 28 September 2026</p>
 
-<p>RecruitLens ("we", "our", "the app") is built and operated by TeamExyKings. This policy explains what data we collect, why, and how it's handled.</p>
+  <p>RecruitLens ("we", "us", "our") is a resume-screening application built and operated by TeamExyKings. This policy explains what data we collect, how it's used, and the third parties involved in delivering the service. It applies to the RecruitLens mobile app and its associated backend.</p>
 
-<h2>1. What We Collect</h2>
-<ul>
-  <li><b>Account info:</b> name, email, phone number, company/domain (if applicable)</li>
-  <li><b>Resume data:</b> when you upload a resume, we extract the text content and analyze it with AI. <b>We do not store the original file</b> — only the extracted text and the analysis results (score, matched/missing skills, summary, etc.)</li>
-  <li><b>Usage data:</b> which AI models you use, scan counts, credit balance — used to enforce plan limits and for your own usage history</li>
-  <li><b>Payment data:</b> processed entirely by Razorpay. We never see or store your card/UPI details — only the transaction outcome (success/failure, amount, credits granted)</li>
-</ul>
+  <h2>1. Data we collect</h2>
 
-<h2>2. How We Use It</h2>
-<ul>
-  <li>To provide the resume screening service itself</li>
-  <li>To enforce plan limits (Free/Pro scan caps, credit balances)</li>
-  <li>To send transactional emails (interview scheduling, invites, approvals) — never marketing spam</li>
-  <li>To improve the app based on aggregate usage patterns (never by reading individual resumes for any purpose other than the analysis you requested)</li>
-</ul>
+  <h3>Account data</h3>
+  <ul>
+    <li>Name, email address, and phone number (where provided)</li>
+    <li>Account type (individual or organisation) and role (e.g. team member, domain admin)</li>
+    <li>Usage counters — credits balance, scans performed, plan tier</li>
+  </ul>
 
-<h2>3. Third Parties We Use</h2>
-<ul>
-  <li><b>Supabase</b> — database and authentication hosting</li>
-  <li><b>OpenRouter</b> — routes your resume text to the AI model you select for analysis</li>
-  <li><b>Brevo</b> — sends transactional emails on our behalf</li>
-  <li><b>Razorpay</b> — payment processing</li>
-</ul>
-<p>None of these third parties use your data for their own purposes beyond providing the service to us.</p>
+  <h3>Candidate / resume data</h3>
+  <p>When you upload a resume for screening, we process:</p>
+  <ul>
+    <li>The text content of the resume (name, contact details, work history, education, skills, and similar information as present in the file)</li>
+    <li>The AI-generated analysis of that resume (score, recommendation, matched/missing skills, and similar output)</li>
+  </ul>
+  <p>Resumes are uploaded by a recruiter or team acting under their own authority. If you are a candidate whose resume was uploaded by someone else, see <a href="#candidates">Section 6</a>.</p>
 
-<h2>4. Data Retention</h2>
-<p>Candidate analysis data is kept as long as your account is active. You can delete individual candidates at any time from within the app. Account deletion requests can be sent to the contact below.</p>
+  <h3>Payment data</h3>
+  <p>Payments are processed by Razorpay. We do not store full card numbers or bank credentials — Razorpay handles that directly. We retain transaction records (amount, date, plan/credits purchased) for accounting purposes.</p>
 
-<h2>5. Your Rights</h2>
-<p>You can request a copy of your data, or request deletion of your account and associated data, by contacting us below.</p>
+  <h3>Device and usage data</h3>
+  <p>Standard technical data needed to operate the app (e.g. error logs) may be collected to diagnose and fix issues.</p>
 
-<h2>6. Contact</h2>
-<p>Questions about this policy: <a href="mailto:yashwanthramsomireddy@gmail.com">yashwanthramsomireddy@gmail.com</a></p>
+  <h2>2. How we use this data</h2>
+  <ul>
+    <li>To provide the core service: extracting resume text and generating an AI-assisted analysis</li>
+    <li>To manage your account, plan, and credit balance</li>
+    <li>To process payments and send related receipts</li>
+    <li>To send service-related emails you'd reasonably expect (e.g. interview reminders you scheduled, low-credit notices)</li>
+    <li>To maintain an audit log of AI usage within your organisation, visible to your domain's admins</li>
+  </ul>
 
+  <h2>3. Third parties we share data with</h2>
+  <p>We use the following third-party services to operate RecruitLens. Each processes only the data necessary for its function.</p>
+  <table>
+    <tr><th>Service</th><th>Purpose</th><th>Data involved</th></tr>
+    <tr><td>Supabase</td><td>Database, authentication, backend hosting</td><td>All account and candidate data described above</td></tr>
+    <tr><td>OpenRouter</td><td>Routes resume text to the AI model you select for analysis</td><td>Resume text, sent to the underlying AI provider (e.g. Anthropic, OpenAI, or Google, depending on the model chosen) for the duration of that request</td></tr>
+    <tr><td>Razorpay</td><td>Payment processing</td><td>Payment details, handled directly by Razorpay</td></tr>
+    <tr><td>Brevo</td><td>Transactional email delivery</td><td>Email address, name, and the content of the specific email being sent</td></tr>
+  </table>
+  <p>We do not sell your data to any third party.</p>
+
+  <h2>4. AI processing</h2>
+  <p>Resume analysis is performed by third-party AI models accessed through OpenRouter. The specific model used depends on your selection at the time of the scan. Resume text is sent to that model's provider to generate the analysis; we do not control how each provider's infrastructure processes that request beyond what OpenRouter's own policies specify. AI-generated scores and recommendations are decision-support tools, not a guarantee of accuracy — see our <a href="./terms-of-service.html">Terms of Service</a> for details.</p>
+
+  <h2>5. Data retention</h2>
+  <p>Candidate and account data is retained for as long as your account is active, or as needed to provide the service. You may request deletion of your account and associated data at any time by contacting us (see Section 8). Some records (e.g. payment transaction history) may be retained longer where required for accounting or legal purposes.</p>
+
+  <h2 id="candidates">6. If your resume was uploaded by someone else</h2>
+  <p>If a recruiter or organisation uploaded your resume to RecruitLens as part of a hiring process, that organisation is the data controller for that submission. To request access to or deletion of your data, please contact that organisation directly, or contact us and we will assist in routing your request.</p>
+
+  <h2>7. Your rights</h2>
+  <ul>
+    <li>Access the personal data we hold about you</li>
+    <li>Request correction of inaccurate data</li>
+    <li>Request deletion of your account and data</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at the email below.</p>
+
+  <h2>8. Children's privacy</h2>
+  <p>RecruitLens is not directed at individuals under 18. We do not knowingly collect data from children.</p>
+
+  <h2>9. Changes to this policy</h2>
+  <p>We may update this policy from time to time. Material changes will be reflected by updating the "Last updated" date above.</p>
+
+  <h2>10. Contact us</h2>
+  <p>For any privacy-related questions or requests, contact us at:<br>
+  <strong>support@teamexykings.in</strong></p>
+
+  <a class="back" href="https://teamexykings.in">&larr; Back to TeamExyKings</a>
 </body>
 </html>
