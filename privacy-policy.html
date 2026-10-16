@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — RecruitLens</title>
+<meta name="description" content="How RecruitLens collects, uses and protects your data, and how to delete your account.">
 <style>
   body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; color: #1a1a1a; line-height: 1.6; background: #fff; }
   h1 { font-size: 28px; margin-bottom: 4px; }
@@ -17,13 +18,16 @@
   table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
   th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
   th { background: #fafafa; }
+  .note { background: #fffbe6; border: 1px solid #f0e2a0; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
 </style>
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 28 September 2026</p>
+  <p class="updated">Last updated: 15 October 2026</p>
 
   <p>RecruitLens ("we", "us", "our") is a resume-screening application built and operated by TeamExyKings. This policy explains what data we collect, how it's used, and the third parties involved in delivering the service. It applies to the RecruitLens mobile app and its associated backend.</p>
+
+  <p class="note"><strong>In short:</strong> we collect only what the app needs to work. We use no advertising and no analytics or tracking tools, and we do not sell your data. Resume text is sent to an AI provider to be analysed. You can delete your account from inside the app (<a href="./account-deletion.html">how</a>).</p>
 
   <h2>1. Data we collect</h2>
 
@@ -31,7 +35,15 @@
   <ul>
     <li>Name, email address, and phone number (where provided)</li>
     <li>Account type (individual or organisation) and role (e.g. team member, domain admin)</li>
-    <li>Usage counters — credits balance, scans performed, plan tier</li>
+    <li>Usage counters: credits balance, scans performed, plan tier</li>
+  </ul>
+
+  <h3>Sign-in data</h3>
+  <ul>
+    <li><strong>Email and password.</strong> Your password is stored by our authentication provider (Supabase) only in scrambled, one-way form. We cannot read it.</li>
+    <li><strong>Google sign-in.</strong> If you choose "Continue with Google", Google tells us your name, your email address and a unique account identifier. We never receive your Google password and we do not access your mail, files, contacts or calendar.</li>
+    <li><strong>Two-factor authentication (optional).</strong> If you switch it on in Settings, the secret key that goes with your authenticator app is stored by our authentication provider so it can check your codes. We cannot see the codes your app shows.</li>
+    <li><strong>Sign-in records.</strong> Our authentication provider keeps standard security records of sign-ins (such as time and IP address) to protect accounts from misuse.</li>
   </ul>
 
   <h3>Candidate / resume data</h3>
@@ -39,21 +51,29 @@
   <ul>
     <li>The text content of the resume (name, contact details, work history, education, skills, and similar information as present in the file)</li>
     <li>The AI-generated analysis of that resume (score, recommendation, matched/missing skills, and similar output)</li>
+    <li>Notes, status, interview details and similar information that you or your team add to a candidate</li>
   </ul>
-  <p>Resumes are uploaded by a recruiter or team acting under their own authority. If you are a candidate whose resume was uploaded by someone else, see <a href="#candidates">Section 6</a>.</p>
+  <p>The original PDF or Word file is not kept: we extract the text, run the analysis, and discard the file. Resumes are uploaded by a recruiter or team acting under their own authority. If you are a candidate whose resume was uploaded by someone else, see <a href="#candidates">Section 7</a>.</p>
+
+  <h3>Resume Builder</h3>
+  <p>If you use the Resume Builder, the text of your own resume is sent to the AI model you pick so it can be rearranged into a template. The result is shown on your phone for you to save as a PDF or Word file. We do not keep the resume content from the Resume Builder; we keep only a usage record (date, model used, credits charged and your name) so that credits and limits can be applied.</p>
 
   <h3>Payment data</h3>
-  <p>Payments are processed by Razorpay. We do not store full card numbers or bank credentials — Razorpay handles that directly. We retain transaction records (amount, date, plan/credits purchased) for accounting purposes.</p>
+  <p>Payments are processed by Razorpay. We do not store full card numbers or bank credentials; Razorpay handles that directly. We retain transaction records (amount, date, plan/credits purchased, Razorpay payment reference) for accounting purposes.</p>
+
+  <h3>Data stored on your phone</h3>
+  <p>The app keeps your sign-in session and your display choices (theme and accent colour) in your phone's secure storage. Signing out removes the session. We do not use cookies or advertising identifiers, and the app does not ask for access to your camera, microphone, contacts, location or photos. It reads a file only when you choose one.</p>
 
   <h3>Device and usage data</h3>
-  <p>Standard technical data needed to operate the app (e.g. error logs) may be collected to diagnose and fix issues.</p>
+  <p>Standard technical data needed to operate the app (for example, error messages returned by our servers) may be recorded to diagnose and fix issues. The app contains no advertising or analytics software.</p>
 
   <h2>2. How we use this data</h2>
   <ul>
     <li>To provide the core service: extracting resume text and generating an AI-assisted analysis</li>
+    <li>To sign you in and keep your account secure (including optional two-factor authentication)</li>
     <li>To manage your account, plan, and credit balance</li>
     <li>To process payments and send related receipts</li>
-    <li>To send service-related emails you'd reasonably expect (e.g. interview reminders you scheduled, low-credit notices)</li>
+    <li>To send service-related emails you'd reasonably expect (for example approval requests, interview emails and reminders you scheduled, low-credit notices)</li>
     <li>To maintain an audit log of AI usage within your organisation, visible to your domain's admins</li>
   </ul>
 
@@ -62,39 +82,53 @@
   <table>
     <tr><th>Service</th><th>Purpose</th><th>Data involved</th></tr>
     <tr><td>Supabase</td><td>Database, authentication, backend hosting</td><td>All account and candidate data described above</td></tr>
+    <tr><td>Google</td><td>Optional sign-in, only if you choose it</td><td>Their own sign-in page handles your credentials; they tell us your name, email address and account identifier</td></tr>
     <tr><td>OpenRouter</td><td>Routes resume text to the AI model you select for analysis</td><td>Resume text, sent to the underlying AI provider (e.g. Anthropic, OpenAI, or Google, depending on the model chosen) for the duration of that request</td></tr>
     <tr><td>Razorpay</td><td>Payment processing</td><td>Payment details, handled directly by Razorpay</td></tr>
     <tr><td>Brevo</td><td>Transactional email delivery</td><td>Email address, name, and the content of the specific email being sent</td></tr>
   </table>
-  <p>We do not sell your data to any third party.</p>
+  <p>We do not sell your data to any third party, and we do not share it for advertising. We may disclose information where the law requires it.</p>
 
   <h2>4. AI processing</h2>
-  <p>Resume analysis is performed by third-party AI models accessed through OpenRouter. The specific model used depends on your selection at the time of the scan. Resume text is sent to that model's provider to generate the analysis; we do not control how each provider's infrastructure processes that request beyond what OpenRouter's own policies specify. AI-generated scores and recommendations are decision-support tools, not a guarantee of accuracy — see our <a href="./terms-of-service.html">Terms of Service</a> for details.</p>
+  <p>Resume analysis is performed by third-party AI models accessed through OpenRouter. The specific model used depends on your selection at the time of the scan. Resume text is sent to that model's provider to generate the analysis; we do not control how each provider's infrastructure processes that request beyond what OpenRouter's own policies specify. Providers of free models may keep or use the text they receive under their own terms, so please choose a paid model for resumes you consider especially sensitive. AI-generated scores and recommendations are decision-support tools, not a guarantee of accuracy; see our <a href="./terms-of-service.html">Terms of Service</a> for details.</p>
 
-  <h2>5. Data retention</h2>
-  <p>Candidate and account data is retained for as long as your account is active, or as needed to provide the service. You may request deletion of your account and associated data at any time by contacting us (see Section 8). Some records (e.g. payment transaction history) may be retained longer where required for accounting or legal purposes.</p>
+  <h2>5. Data retention and deletion</h2>
+  <p>Account and candidate data is kept for as long as your account is active, or as needed to provide the service.</p>
+  <p><strong>Deleting your account.</strong> In the app, open <em>Settings → Account → Delete Account</em>, type DELETE and send the request. You can also email us from your registered address (see <a href="./account-deletion.html">Delete your account</a>). We complete every request within 30 days, and you can cancel it in the app until then. When it is completed:</p>
+  <ul>
+    <li>Your sign-in is removed (including any Google link and your two-factor setup), so you can no longer sign in.</li>
+    <li>Your profile details, notifications and private candidate notes are deleted, and you are removed from teams.</li>
+    <li>If you have an Individual account, every candidate record, resume text, analysis and scan history you created is deleted.</li>
+    <li>If you belong to an organisation, the organisation keeps the candidate records and activity log it owns; your name in them is replaced with "Deleted user". Unused credits return to the organisation's pool.</li>
+    <li>A Domain Admin must first hand the role over (or close the organisation) before the account can be deleted.</li>
+  </ul>
+  <p><strong>What we keep.</strong> Payment transaction records stay for as long as accounting and tax rules require, with no personal details left on them. A small anonymised stub of the account (name "Deleted user", no email or phone) stays so that those records and audit logs remain intact. Backups are overwritten by our database provider on its normal schedule.</p>
 
-  <h2 id="candidates">6. If your resume was uploaded by someone else</h2>
+  <h2>6. Security</h2>
+  <p>Data is sent over encrypted connections. Access to each organisation's data is restricted by database rules so that people can see only what their role allows, and optional two-factor authentication protects accounts even if a password is stolen. No system is perfectly secure, so please use a strong, unique password.</p>
+
+  <h2 id="candidates">7. If your resume was uploaded by someone else</h2>
   <p>If a recruiter or organisation uploaded your resume to RecruitLens as part of a hiring process, that organisation is the data controller for that submission. To request access to or deletion of your data, please contact that organisation directly, or contact us and we will assist in routing your request.</p>
 
-  <h2>7. Your rights</h2>
+  <h2>8. Your rights</h2>
   <ul>
     <li>Access the personal data we hold about you</li>
     <li>Request correction of inaccurate data</li>
     <li>Request deletion of your account and data</li>
+    <li>Withdraw a consent you gave (for example by switching off two-factor or deleting your account)</li>
   </ul>
-  <p>To exercise any of these rights, contact us at the email below.</p>
+  <p>To exercise any of these rights, use the in-app option or contact us at the email below. We reply within 30 days.</p>
 
-  <h2>8. Children's privacy</h2>
+  <h2>9. Children's privacy</h2>
   <p>RecruitLens is not directed at individuals under 18. We do not knowingly collect data from children.</p>
 
-  <h2>9. Changes to this policy</h2>
+  <h2>10. Changes to this policy</h2>
   <p>We may update this policy from time to time. Material changes will be reflected by updating the "Last updated" date above.</p>
 
-  <h2>10. Contact us</h2>
-  <p>For any privacy-related questions or requests, contact us at:<br>
+  <h2>11. Contact us</h2>
+  <p>For any privacy-related questions, requests or complaints, contact TeamExyKings (Yashwanth Ram Somireddy) at:<br>
   <strong>support@teamexykings.in</strong></p>
 
-  <a class="back" href="https://teamexykings.in">&larr; Back to TeamExyKings</a>
+  <a class="back" href="./index.html">&larr; Back to RecruitLens</a>
 </body>
 </html>
